@@ -107,3 +107,9 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+// プラグインのロード設定
+CakePlugin::load('Migrations');
+
+// 配列もOK
+CakePlugin::load(array('DebugKit', 'Migrations'));
