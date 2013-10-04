@@ -13,13 +13,11 @@ class UsersController extends AppController{
 	}
 	
 	public function admin_userRegist(){
-		if($this->request->is('User')){
-		$this->Session->setFlash('Success!');
+		if($this->request->isPost()){
 			if($this->User->save($this->request->data)){
-				$this->Session->setFlash('Success!!');
 				$this->redirect(array('action'=>'admin_index'));
 			} else {
-				$this->Session->setFlash('failed!');
+				$this->Session->setFlash('失敗したよ!!!');
 			}
 		}
 	}

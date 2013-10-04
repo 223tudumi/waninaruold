@@ -28,7 +28,5 @@
 	</tr>
 </table>
 </div>
-<p>
-	<?php echo $this->Html->link('戻る','/admin/users/'); ?>
-</p>
+	<?php echo $this->Form->button('戻る',array('onclick' => " location.href = '/waninaru/admin/users' ")); ?>
 </body>
